@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <%- include('partials/head.ejs') %> 
+</head>
+<body>
+    
+    <main class="center">
+        <div class="container_center">
+            <form action="/index" method="post" class="form_login" id="form_login">
+                <label for="user">
+                    Usuário: <input type="text" name="user" id="user" placeholder="Digite o usuário">
+                </label>
+                <label for="password">
+                    Senha: <input type="password" name="password" id="password" placeholder="Digite a senha">
+                </label>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </main>
+
+
+    <%- include('partials/script.ejs') %> 
+</body>
+</html>

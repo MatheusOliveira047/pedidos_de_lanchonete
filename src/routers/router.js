@@ -1,7 +1,8 @@
 const router = require('express').Router()
 const controllersRouter = require('../controllers/controller')
 
-router.get('/',controllersRouter.index)
+router.get('/',controllersRouter.login)
+router.post('/index',controllersRouter.index)
 
 
 
