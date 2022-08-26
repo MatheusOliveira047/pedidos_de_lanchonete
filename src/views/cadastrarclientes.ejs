@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <%- include('partials/head.ejs') %> 
+</head>
+<body>
+    
+    <main class="center">
+        <div class="container_center">
+            <h1>Cadastrar um novo Cliente</h1>
+            <form action="/cadastrarclientes/add" method="post">
+                <label for="name">
+                    Nome: <input type="text" name="name" placeholder="Dígite o seu nome">
+                </label>
+                <label for="email">
+                    Email: <input type="email" name="email" placeholder="Dígite o seu email">
+                </label>
+                <label for="telefone">
+                    Telefone: <input type="number" name="telefone" placeholder="Dígite o seu Telefone">
+                </label>
+                <label for="endereco">
+                    Endereço: <input type="text" name="endereco" placeholder="Dígite o seu Endereço">
+                </label>
+                <button type="submit">Cadastrar</button>
+            </form>
+
+        </div>
+    </main>
+
+
+    <%- include('partials/script.ejs') %> 
+</body>
+</html>
