@@ -21,7 +21,8 @@ const cadastrarclientes = (req,res)=>{
     })
 }
 
-function cadastrarclientesadd(req,res){
+//recebe os dados do formulário de clientes e manda para o banco de dados
+const cadastrarclientesadd = (req,res)=>{
     const {
         name,
         email,
@@ -37,8 +38,22 @@ function cadastrarclientesadd(req,res){
     })
 
     NewCliente.save()
-    res.send('cadastro Realizado')
+    res.render('cadastrarclientes',{
+        title:"Cadastrar Cliente",
+        msg:"cadastro realizado com sucesso"
+    })
 
+}
+
+// lista os clientes cadastrados no banco de dados
+const listarclientes = async (req,res)=>{
+    const clientes = await ModelCliente.find({})
+
+    res.render('listarclientes',{
+        
+        title:'Lista de Clientes',
+        clientes
+    })
 }
 
 
@@ -47,4 +62,5 @@ module.exports = {
     index,
     cadastrarclientes,
     cadastrarclientesadd,
+    listarclientes,
 }

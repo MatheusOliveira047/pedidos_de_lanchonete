@@ -1,10 +1,22 @@
 const mongoose = require('mongoose')
 
 const Schema = new mongoose.Schema({
-    name: String,
-    email: String,
-    telefone: Number,
-    endereco: String,
+    name:{
+        type:String,
+        required:true,
+    },
+    email:{
+        type:String,
+        required:true,
+    },
+    telefone:{
+        type:Number,
+        required:true,
+    },
+    endereco:{
+        type:String,
+        required:true,
+    },
 })
 const ModelCliente = mongoose.model('cliente',Schema)
 

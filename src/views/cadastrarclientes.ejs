@@ -8,6 +8,11 @@
     <main class="center">
         <div class="container_center">
             <h1>Cadastrar um novo Cliente</h1>
+
+            <h2><% if(typeof msg !== 'undefined') { %>
+                <%=msg %> 
+            <% } %></h2>
+
             <form action="/cadastrarclientes/add" method="post">
                 <label for="name">
                     Nome: <input type="text" name="name" placeholder="Dígite o seu nome">

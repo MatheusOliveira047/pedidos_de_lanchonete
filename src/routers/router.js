@@ -10,7 +10,7 @@ router.post('/index',controllersRouter.index)
 // rotas de clientes
 router.get('/cadastrarclientes',controllersRouter.cadastrarclientes)
 router.post('/cadastrarclientes/add',controllersRouter.cadastrarclientesadd)
-// listar clientes
+router.get('/listarclientes',controllersRouter.listarclientes)
 // excluir clientes
 
 // rotas de produtos

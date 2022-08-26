@@ -9,6 +9,16 @@
         <div class="container_center">
             <h1>Lista de Clientes</h1>
            
+            <% clientes.forEach(cliente => { %>
+                <ul>
+                    <li><%= cliente.name%></li>
+                    <li><%= cliente.email%></li>
+                    <li><%= cliente.endereco%></li>
+                    <li><%= cliente.telefone%></li>
+                </ul>
+                <hr>
+            <% }) %>
+           
 
         </div>
     </main>
