@@ -11,11 +11,13 @@ router.post('/index',controllersRouter.index)
 router.get('/cadastrarclientes',controllersRouter.cadastrarclientes)
 router.post('/cadastrarclientes/add',controllersRouter.cadastrarclientesadd)
 router.get('/listarclientes',controllersRouter.listarclientes)
-// excluir clientes
+router.get('/excluircliente/:id',controllersRouter.excluircliente)
 
 // rotas de produtos
-// cadastrar produtos
-// listar produtos
+router.get('/cadastrarprodutos',controllersRouter.cadastrarproduto)
+router.post('/cadastrarprodutos/add',controllersRouter.cadastrarprodutoadd)
+router.get('/listarprodutos',controllersRouter.listarprodutos)
+
 // excluir produtos
 
 

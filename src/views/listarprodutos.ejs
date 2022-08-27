@@ -8,15 +8,13 @@
 
     <main class="center">
         <div class="container_center">
-            <h1>Lista de Clientes</h1>
+            <h1>Lista de Produtos</h1>
            
-            <% clientes.forEach(cliente => { %>
+            <% produtos.forEach(produto => { %>
                 <ul>
-                    <li><%= cliente.name%></li>
-                    <li><%= cliente.email%></li>
-                    <li><%= cliente.endereco%></li>
-                    <li><%= cliente.telefone%></li>
-                    <li><a href="/excluircliente/<%= cliente._id %> ">Excluir cliente</a></li>
+                    <li><%= produto.name%></li>
+                    <li><%= produto.preco%></li>
+                    
                 </ul>
                 <hr>
             <% }) %>

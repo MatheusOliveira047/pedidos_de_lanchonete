@@ -1,15 +1,22 @@
-// validação de login
-const form_login = document.querySelector('#form_login')
-form_login.onsubmit = (e)=>{
-    e.preventDefault()
-    const user = document.querySelector("#user").value
-    const pwd = document.querySelector("#password").value
+// menu responsivo
+//SELETORES
+let menuResponsivo = document.querySelector(".header")
+let menuHambuguer = document.querySelector(".menu")
+let fecharMenuAncoras = document.querySelectorAll(".nav-list li a")
 
-    if(user === 'admin' && pwd === 'admin'){
-        form_login.submit()
-    }else(
-        alert('usuário ou senha incorreto')
-    )
+//ADICIONANDO OS EVENTOS DE CLICK 
+menuHambuguer.addEventListener("click",menu)
+fecharMenuAncoras.forEach((ancoras)=>{
+    ancoras.addEventListener('click',menu)   
+})
 
-
+//DECLARANDO A FUNÇÃO
+function menu(){
+    menuHambuguer.classList.toggle("active")
+    menuResponsivo.classList.toggle("active")    
 }
+
+
+
+
+

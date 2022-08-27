@@ -1,26 +1,21 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <%- include('partials/head.ejs') %> 
-</head>
-<body>
-    
-    <main class="center">
-        <div class="container_center">
-            <h1>Matt Food</h1>
-
-            <ul class="rotas">
-                <li><a href="/cadastrarclientes">Cadastrar Clientes</a></li>
+<header class="header">
+    <div class="logo">
+        <h2>MattCode</h2>
+    </div>
+    <nav>
+        <ul class="nav-list">
+            <li><a href="/cadastrarclientes">Cadastrar Clientes</a></li>
                 <li><a href="/listarclientes">Listar Clientes</a></li>
                 <li><a href="/cadastrarprodutos">Cadastrar Produtos</a></li>
                 <li><a href="/listarprodutos">Listar Produtos</a></li>
                 <li><a href="/realizarpedido">Realizar Pedido</a></li>
                 <li><a href="/alterarstatus">Alterar Status do Pedido</a></li>
                 <li><a href="/listarpedidos">Listar Pedidos</a></li>
-            </ul>
+        </ul>
+        <div class="menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
         </div>
-    </main>
-
-
-</body>
-</html>
+    </nav>
+</header>
