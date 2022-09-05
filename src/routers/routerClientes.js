@@ -7,10 +7,4 @@ routerClientes.post('/cadastrarclientes/add',controllersClientes.cadastrarclient
 routerClientes.get('/listarclientes',controllersClientes.listarclientes)
 routerClientes.get('/excluircliente/:id',controllersClientes.excluircliente)
 
-
-// rotas de pedidos
-// realizar pedidos
-// alterar status de pedidos
-// listar pedidos
-
 module.exports = routerClientes

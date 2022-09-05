@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <%- include('partials/head.ejs') %> 
+</head>
+<body>
+    <%- include('partials/navbar.ejs') %> 
+
+    <main class="center">
+        <div class="container_center">
+            <h1>Realizar um novo Pedido</h1>
+
+            <h2><% if(typeof msg !== 'undefined') { %>
+                <%=msg %> 
+            <% } %></h2>
+
+            <form action="/realizarpedido/add" method="post">
+                <div>
+                    <select name="codigoDoCliente" id="codigoDoCliente">
+                        <option selected>--Selecione o Cliente</option>
+                        <% clientes.forEach(cliente => { %>
+                         <option value="<%= cliente._id %> "><%= cliente.name  %> </option>
+                        <% }) %>
+                    </select>
+                </div>
+                <div>
+                    <select name="codigoDoProduto" id="codigoDoProduto">
+                        <option selected>--Selecione o Produto</option>
+                        <% produtos.forEach(produto => { %>
+                         <option value="<%= produto._id %> "><%= produto.name  %> </option>
+                        <% }) %>
+                    </select>
+                </div>
+                <div>
+                    <label>
+                        Data do Pedido: <input type="date" name="data" id="data">
+                    </label>
+                </div>
+                <div>
+                    <select name="status" id="status">
+                        <option selected>--Selecione o status do pedido--</option>
+                        <option value="pendente">Pendente</option>
+                        <option value="emPreparo">Em Preparo</option>
+                        <option value="emEntrega">Em Entrega</option>
+                        <option value="entregue">Entregue</option>
+                        <option value="cancelado">Cancelado</option>
+                    </select>
+                </div>
+
+
+                <button type="submit">Realizar Pedidos</button>
+            </form>
+
+
+        </div>
+    </main>
+
+
+    <%- include('partials/script.ejs') %> 
+</body>
+</html>

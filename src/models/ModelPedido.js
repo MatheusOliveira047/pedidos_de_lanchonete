@@ -2,15 +2,15 @@ const mongoose = require('mongoose')
 
 const Schema = new mongoose.Schema({
     codigoDoCliente:{
-        type:ObjectId,
+        type: String,
         required:true,
     },
     codigoDoProduto:{
-        type:ObjectId,
+        type: String,
         required:true,
     },
     data:{
-        type:Number,
+        type:String,
         required:true,
     },
     status:{
@@ -18,7 +18,7 @@ const Schema = new mongoose.Schema({
         required:true,
     },
 })
-const ModelProduto = mongoose.model('produto',Schema)
+const ModelProduto = mongoose.model('pedido',Schema)
 
 
 module.exports = ModelProduto

@@ -5,6 +5,7 @@ const app = express()
 const routerClientes = require('./routers/routerClientes')
 const routerProdutos = require('./routers/routerProdutos')
 const routerIndex = require('./routers/routerIndex')
+const routerPedido = require('./routers/routerPedido')
 
 // configurando dados sensiveis 
 const dotenv = require('dotenv')
@@ -28,6 +29,7 @@ app.set('view engine', 'ejs')
 app.use(routerIndex)
 app.use(routerClientes)
 app.use(routerProdutos)
+app.use(routerPedido)
 
 
 // servidor
