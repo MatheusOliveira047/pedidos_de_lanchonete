@@ -17,6 +17,7 @@ router.get('/excluircliente/:id',controllersRouter.excluircliente)
 router.get('/cadastrarprodutos',controllersRouter.cadastrarproduto)
 router.post('/cadastrarprodutos/add',controllersRouter.cadastrarprodutoadd)
 router.get('/listarprodutos',controllersRouter.listarprodutos)
+router.get('/excluirproduto/:id',controllersRouter.excluirproduto)
 
 // excluir produtos
 

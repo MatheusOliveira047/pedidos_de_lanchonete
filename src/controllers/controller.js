@@ -21,7 +21,6 @@ const cadastrarclientes = (req,res)=>{
         title:"Cadastrar Cliente"
     })
 }
-
 //recebe os dados do formulário de clientes e manda para o banco de dados
 const cadastrarclientesadd = (req,res)=>{
     const {
@@ -45,7 +44,6 @@ const cadastrarclientesadd = (req,res)=>{
     })
 
 }
-
 // lista os clientes cadastrados no banco de dados
 const listarclientes = async (req,res)=>{
     const clientes = await ModelCliente.find({})
@@ -56,25 +54,25 @@ const listarclientes = async (req,res)=>{
         clientes
     })
 }
-
+// excluir cliente
 const excluircliente = async (req,res)=>{
     const {id} = req.params
 
     const remove = await ModelCliente.deleteOne({_id:id})
 
     if(remove){
-       confirm('deseja excluir esse')
+       res.redirect("/listarclientes")
     }
 
 }
 
-
+//cadastrar produtos
 const cadastrarproduto = (req,res)=>{
     res.render('cadastrarprodutos',{
         title:'Cadastrar Produtos'
     })
 }
-
+//receber dados do formulário de produtos e mandar para o banco de dados
 const cadastrarprodutoadd = (req,res)=>{
     const {
         name,
@@ -93,7 +91,7 @@ const cadastrarprodutoadd = (req,res)=>{
     })
 
 }
-
+//listar produtos
 const listarprodutos = async (req,res)=>{
     const produtos = await ModelProduto.find({})
 
@@ -102,6 +100,17 @@ const listarprodutos = async (req,res)=>{
         title:'Lista de Clientes',
         produtos
     })
+}
+//excluir produtos
+const excluirproduto = async (req,res)=>{
+    const {id} = req.params
+
+    const remove = await ModelProduto.deleteOne({_id:id})
+
+    if(remove){
+       res.redirect("/listarprodutos")
+    }
+
 }
 
 
@@ -115,4 +124,5 @@ module.exports = {
     cadastrarprodutoadd,
     listarprodutos,
     excluircliente,
+    excluirproduto,
 }
