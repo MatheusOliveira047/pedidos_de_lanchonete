@@ -1,25 +1,26 @@
 const router = require('express').Router()
-const controllersRouter = require('../controllers/controller')
+const controllersProduto = require('../controllers/controllerProduto')
+const controllersClientes = require('../controllers/controllerClientes')
+const controllerIndex = require('../controllers/controllerIndex')
 
 // rota de login
-router.get('/',controllersRouter.login)
-
+router.get('/',controllerIndex.login)
 // rota da pagina inicial
-router.post('/index',controllersRouter.index)
+router.post('/index',controllerIndex.index)
+
 
 // rotas de clientes
-router.get('/cadastrarclientes',controllersRouter.cadastrarclientes)
-router.post('/cadastrarclientes/add',controllersRouter.cadastrarclientesadd)
-router.get('/listarclientes',controllersRouter.listarclientes)
-router.get('/excluircliente/:id',controllersRouter.excluircliente)
+router.get('/cadastrarclientes',controllersClientes.cadastrarclientes)
+router.post('/cadastrarclientes/add',controllersClientes.cadastrarclientesadd)
+router.get('/listarclientes',controllersClientes.listarclientes)
+router.get('/excluircliente/:id',controllersClientes.excluircliente)
 
 // rotas de produtos
-router.get('/cadastrarprodutos',controllersRouter.cadastrarproduto)
-router.post('/cadastrarprodutos/add',controllersRouter.cadastrarprodutoadd)
-router.get('/listarprodutos',controllersRouter.listarprodutos)
-router.get('/excluirproduto/:id',controllersRouter.excluirproduto)
+router.get('/cadastrarprodutos',controllersProduto.cadastrarproduto)
+router.post('/cadastrarprodutos/add',controllersProduto.cadastrarprodutoadd)
+router.get('/listarprodutos',controllersProduto.listarprodutos)
+router.get('/excluirproduto/:id',controllersProduto.excluirproduto)
 
-// excluir produtos
 
 
 // rotas de pedidos
