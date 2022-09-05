@@ -1,26 +1,34 @@
-const { urlencoded } = require('express')
 const express = require('express')
 const app = express()
-const path = require('path')
-const router = require('./routers/router')
-const db = require('./database/db')
+
+// rotas
+const routerClientes = require('./routers/routerClientes')
+const routerProdutos = require('./routers/routerProdutos')
+const routerIndex = require('./routers/routerIndex')
+
+// configurando dados sensiveis 
 const dotenv = require('dotenv')
 dotenv.config()
 
+// configuração do banco de dados
+const db = require('./database/db')
 db()
 
-
-
+// receber dados via post
 app.use(express.urlencoded({extended:true}))
 
+// configuração de pastas 
+const path = require('path')
 app.use(express.static(path.join(__dirname,'public')))
 app.set('views',path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
-app.use(router)
+
+// habilitando rotas
+app.use(routerIndex)
+app.use(routerClientes)
+app.use(routerProdutos)
 
 
-
-
-
+// servidor
 app.listen(process.env.PORT || 8080, ()=>console.log('connected to server'))
