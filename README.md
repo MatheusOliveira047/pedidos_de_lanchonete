@@ -1,23 +1,24 @@
 # Pedidos de Lanchonete
 
-### Sobre o projeto
-Meu portfólio onde apliquei alguns conhecimentos que eu possuo 
-• HTML semântico para um bom SEO do site ajudando a indexar o site  em mecanismo de busca como google
-• SASS para otimizar o CSS, uso de  MEDIA QUERIES para melhor experiência em qualquer dispositivo
-• JAVASCRIPT para aplicar bibliotecas e eventos de mouse para uma melhor interatividade com o usuário 
-
-
-## Tecnologias utilizadas
+# Sobre o projeto
+Aplicação de uma lanchonete
+• Cadastro de clientes
+• listar e excluir clientes
+• cadastro de produtos
+• listar e exluir produtos
+• realizar pedidos
+• listar e alterar status dos pedidos  
+# Tecnologias utilizadas
 - EJS
 - CSS
-- JAVASCRIPT - EXPRESS
+- EXPRESS
 - MONGODB
 - NPM
 
 
-## Link
+# Link
 **live preview**: https://pedidos-lanchonete.herokuapp.com/
 
 
-## Obs
+# Obs
 caso queira analisar o codigo como se estivesse no vscode aperte a tecla ponto (.)
