@@ -11,9 +11,9 @@
             <h1>Lista de Produtos</h1>
            
             <% produtos.forEach(produto => { %>
-                <ul>
-                    <li><%= produto.name%></li>
-                    <li><%= produto.preco%></li>
+                <ul class="boxes-list">
+                    <li>Produto: <%= produto.name%></li>
+                    <li><%= produto.preco%> R$</li>
                     <li><a href="/excluirproduto/<%= produto._id %> ">Excluir Produto</a></li>
 
                 </ul>

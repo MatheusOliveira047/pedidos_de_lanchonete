@@ -8,10 +8,12 @@ const Schema = new mongoose.Schema({
     email:{
         type:String,
         required:true,
+        unique:true,
     },
     telefone:{
         type:Number,
         required:true,
+        unique:true,
     },
     endereco:{
         type:String,

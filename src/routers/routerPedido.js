@@ -4,7 +4,7 @@ const controllerPedido = require('../controllers/controllerPedido')
 // rotas de pedidos
 routerPedido.get('/realizarpedido',controllerPedido.realizarPedido)
 routerPedido.post('/realizarpedido/add',controllerPedido.realizarPedidoAdd)
-// alterar status de pedidos
+routerPedido.get('alterarstatus/:id',controllerPedido.alterarStatus)
 // listar pedidos
 
 module.exports = routerPedido

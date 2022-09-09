@@ -11,11 +11,11 @@
             <h1>Lista de Clientes</h1>
            
             <% clientes.forEach(cliente => { %>
-                <ul>
-                    <li><%= cliente.name%></li>
-                    <li><%= cliente.email%></li>
-                    <li><%= cliente.endereco%></li>
-                    <li><%= cliente.telefone%></li>
+                <ul class="boxes-list">
+                    <li>Cliente: <strong><%= cliente.name%></strong></li>
+                    <li>E-Mail: <%= cliente.email%></li>
+                    <li>Endereço: <%= cliente.endereco%></li>
+                    <li>Telefone: <%= cliente.telefone%></li>
                     <li><a href="/excluircliente/<%= cliente._id %> ">Excluir cliente</a></li>
                 </ul>
                 <hr>

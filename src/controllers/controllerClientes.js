@@ -7,7 +7,7 @@ const cadastrarclientes = (req,res)=>{
     })
 }
 //recebe os dados do formulário de clientes e manda para o banco de dados
-const cadastrarclientesadd = (req,res)=>{
+const cadastrarclientesadd = async (req,res)=>{
     const {
         name,
         email,
@@ -22,11 +22,16 @@ const cadastrarclientesadd = (req,res)=>{
         endereco,
     })
 
-    NewCliente.save()
-    res.render('cadastrarclientes',{
-        title:"Cadastrar Cliente",
-        msg:"cadastro realizado com sucesso"
-    })
+   try {
+    await NewCliente.save()
+    await res.render('cadastrarclientes',{
+     title:"Cadastrar Cliente",
+     msg:'cadastro de cliente realizado com sucesso !!!'
+     })
+   } catch (error) {
+      alert("Email ou Telefone ja cadastrado", error)
+   }
+   
 
 }
 // lista os clientes cadastrados no banco de dados

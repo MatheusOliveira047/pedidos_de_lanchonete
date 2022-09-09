@@ -42,7 +42,25 @@ const realizarPedidoAdd = async(req,res)=>{
 
 }
 
+const alterarStatus = async (req,res)=>{
+    const pedido = await ModelPedido.find({})
+    const {id} = req.params
+    const {status} = req.body
+
+    const Status = status
+
+    const pedidoUp = await ModelPedido.findOneAndUpdate({_id:id},Status)
+
+
+
+    res.render('alterarstatus',{
+        title:'Alterar Status do pedido',
+        pedido
+    })
+}
+
 module.exports = {
     realizarPedido,
-    realizarPedidoAdd
+    realizarPedidoAdd,
+    alterarStatus
 }
