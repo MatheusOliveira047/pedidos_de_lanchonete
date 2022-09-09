@@ -22,16 +22,20 @@ const cadastrarclientesadd = async (req,res)=>{
         endereco,
     })
 
-   try {
-    await NewCliente.save()
-    await res.render('cadastrarclientes',{
-     title:"Cadastrar Cliente",
-     msg:'cadastro de cliente realizado com sucesso !!!'
-     })
-   } catch (error) {
-      alert("Email ou Telefone ja cadastrado", error)
-   }
-   
+    NewCliente.save()
+    .then(()=>{
+        res.render('cadastrarclientes',{
+            title:"Cadastrar Cliente",
+            msg:"cadastro realizado com sucesso"
+        })
+    }).catch((error)=>{
+        res.render('cadastrarclientes',{
+            title:"Cadastrar Cliente",
+            msg:`${email} já está cadastrado`
+        })
+    })
+    
+    
 
 }
 // lista os clientes cadastrados no banco de dados

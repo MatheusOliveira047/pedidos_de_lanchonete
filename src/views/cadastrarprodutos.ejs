@@ -14,12 +14,12 @@
                 <%=msg %> 
             <% } %></h2>
 
-            <form action="/cadastrarprodutos" method="post"  class="form">
+            <form action="/cadastrarprodutos" method="post"  class="form" id="formProdutos">
                 <label for="nome">
-                    Nome: <input type="text" name="name" placeholder="Dígite o do produto">
+                    Nome: <input id="nome" type="text" name="name" placeholder="Dígite o do produto">
                 </label>
                 <label for="preco">
-                    Preço: <input type="number" name="preco" placeholder="Dígite o preço do Produto">
+                    Preço: <input id="preco" type="number" name="preco" placeholder="Dígite o preço do Produto">
                 </label>
                 
                 <button type="submit">Cadastrar Produto</button>
@@ -28,6 +28,7 @@
         </div>
     </main>
 
+    <script src="js/validacaoProdutos.js"></script>
 
     <%- include('partials/script.ejs') %> 
 </body>

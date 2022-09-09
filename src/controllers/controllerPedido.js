@@ -59,8 +59,19 @@ const alterarStatus = async (req,res)=>{
     })
 }
 
+const listarpedidos = async(req,res)=>{
+    const pedidos = await ModelPedido.find({})
+    
+   
+    res.render('listarpedidos',{
+        title:'Lista de Pedidos',
+        pedidos
+    })
+}
+
 module.exports = {
     realizarPedido,
     realizarPedidoAdd,
-    alterarStatus
+    alterarStatus,
+    listarpedidos
 }

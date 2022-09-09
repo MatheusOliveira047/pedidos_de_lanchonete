@@ -14,10 +14,10 @@
                 <%=msg %> 
             <% } %></h2>
 
-            <form action="/realizarpedido/add" method="post">
+            <form action="/realizarpedido" method="post" class="form" id="formPedidos">
                 <div>
-                    <select name="codigoDoCliente" id="codigoDoCliente">
-                        <option selected>--Selecione o Cliente</option>
+                    <select  name="codigoDoCliente" id="codigoDoCliente">
+                        <option value="" selected>--Selecione o Cliente</option>
                         <% clientes.forEach(cliente => { %>
                          <option value="<%= cliente._id %> "><%= cliente.name  %> </option>
                         <% }) %>
@@ -25,7 +25,7 @@
                 </div>
                 <div>
                     <select name="codigoDoProduto" id="codigoDoProduto">
-                        <option selected>--Selecione o Produto</option>
+                        <option value="" selected>--Selecione o Produto</option>
                         <% produtos.forEach(produto => { %>
                          <option value="<%= produto._id %> "><%= produto.name  %> </option>
                         <% }) %>
@@ -50,7 +50,7 @@
         </div>
     </main>
 
-
+    <script src="js/validacaoPedidos.js"></script>
     <%- include('partials/script.ejs') %> 
 </body>
 </html>

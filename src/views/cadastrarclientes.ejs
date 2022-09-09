@@ -15,18 +15,18 @@
                 <%=msg %> 
             <% } %></h2>
 
-            <form action="/cadastrarclientes" method="post" class="form">
+            <form action="/cadastrarclientes" method="post" id="formClientes" class="form">
                 <label for="name">
-                    Nome: <input type="text" name="name" placeholder="Dígite o seu nome">
+                    Nome: <input id="name" type="text" name="name" placeholder="Dígite o seu nome">
                 </label>
                 <label for="email">
-                    Email: <input type="email" name="email" placeholder="Dígite o seu email">
+                    Email: <input id="email" type="email" name="email" placeholder="Dígite o seu email">
                 </label>
                 <label for="telefone">
-                    Telefone: <input type="number" name="telefone" placeholder="Dígite o seu Telefone">
+                    Telefone: <input id="telefone" type="number" name="telefone" placeholder="Dígite o seu Telefone">
                 </label>
                 <label for="endereco">
-                    Endereço: <input type="text" name="endereco" placeholder="Dígite o seu Endereço">
+                    Endereço: <input id="endereco" type="text" name="endereco" placeholder="Dígite o seu Endereço">
                 </label>
                 <button type="submit">Cadastrar</button>
             </form>
@@ -35,6 +35,7 @@
     </main>
 
 
+    <script src="js/validacaoClientes.js"></script>
     <%- include('partials/script.ejs') %> 
 </body>
 </html>

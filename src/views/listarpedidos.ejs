@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <%- include('partials/head.ejs') %> 
+</head>
+<body>
+    <%- include('partials/navbar.ejs') %> 
+
+    <main class="center">
+        <div class="container_center">
+            <h1>Pedidos</h1>
+
+            <h2><% if(typeof msg !== 'undefined') { %>
+                <%=msg %> 
+            <% } %></h2>
+
+            <% pedidos.forEach(pedido => { %>
+                <section class="pedidos">
+                    <ul>
+                        <li>Codigo do Cliente <%= pedido.codigoDoCliente  %> </li>
+                        <li>Codigo do Produto <%= pedido.codigoDoProduto  %> </li>
+                        <li>Data do Pedido <%= pedido.data  %> </li>
+                    </ul>
+                    <form action="/listarpedidos" method="post" class="form">
+                        <div>
+                            <select name="status" id="status">
+                                <option selected value="<%= pedido.status %> "><%= pedido.status %> </option>
+                            </select>
+                        </div>
+                        <button type="submit">Alterar Status do pedido</button>
+                    </form>
+                </section>
+            <% }) %>    
+            
+
+
+        </div>
+    </main>
+
+
+    <%- include('partials/script.ejs') %> 
+</body>
+</html>

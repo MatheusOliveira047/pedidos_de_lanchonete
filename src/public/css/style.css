@@ -30,12 +30,7 @@ body{
     align-items: center;
 }
 
-.form_login{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
+
 .center .container_center .rotas li{
     padding: 12px;
     list-style: none;

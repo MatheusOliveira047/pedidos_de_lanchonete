@@ -9,11 +9,13 @@ const Schema = new mongoose.Schema({
         type:String,
         required:true,
         unique:true,
+        message: '{VALUE} já está cadastrado'
     },
     telefone:{
         type:Number,
         required:true,
         unique:true,
+        message: '{VALUE} já está cadastrado'
     },
     endereco:{
         type:String,
