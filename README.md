@@ -1,13 +1,15 @@
 # Pedidos de Lanchonete
 
 # Sobre o projeto
-Aplicação de uma lanchonete
-• Cadastro de clientes
-• listar e excluir clientes
-• cadastro de produtos
-• listar e exluir produtos
-• realizar pedidos
-• listar e alterar status dos pedidos  
+
+Interface de uma lanchonete onde é possível realizar:
+- Cadastro de clientes
+- listar e excluir clientes
+- cadastro de produtos
+- listar e exluir produtos
+- realizar pedidos
+- listar e alterar status dos pedidos  
+
 # Tecnologias utilizadas
 - EJS
 - CSS
