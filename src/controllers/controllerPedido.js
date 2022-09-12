@@ -61,12 +61,15 @@ const alterarStatus = async (req,res)=>{
 
 const listarpedidos = async(req,res)=>{
     const pedidos = await ModelPedido.find({})
-    
-   
-    res.render('listarpedidos',{
+    const {codigoDoCliente,codigoDoProduto,data,status} = pedidos
+
+    const clientePedido = await ModelCliente.findById(codigoDoCliente)
+
+   console.log(clientePedido)
+    /* res.render('listarpedidos',{
         title:'Lista de Pedidos',
         pedidos
-    })
+    }) */
 }
 
 module.exports = {

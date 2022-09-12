@@ -2,11 +2,11 @@ const mongoose = require('mongoose')
 
 const Schema = new mongoose.Schema({
     codigoDoCliente:{
-        type: String,
+        type: mongoose.ObjectId,
         required:true,
     },
     codigoDoProduto:{
-        type: String,
+        type: mongoose.ObjectId,
         required:true,
     },
     data:{
